@@ -1,0 +1,5 @@
+﻿  Dungeon.cpp
+  MonkGame.cpp
+  Generowanie kodu...
+MonkGame.obj : error LNK2005: Element "private: static class Dungeon * Dungeon::dungeon_" (?dungeon_@Dungeon@@0PAV1@A) jest już zdefiniowany w elemencie Dungeon.obj
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\Debug\MonkGame.exe : fatal error LNK1169: znaleziono co najmniej jeden wielokrotnie zdefiniowany symbol

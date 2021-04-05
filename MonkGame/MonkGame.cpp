@@ -2,10 +2,12 @@
 //
 
 #include <iostream>
+#include "Dungeon.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+    Dungeon* dungeon = Dungeon::GetInstance();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
