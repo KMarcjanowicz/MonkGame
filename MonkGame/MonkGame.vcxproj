@@ -139,14 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Corridor.cpp" />
     <ClCompile Include="Dungeon.cpp" />
+    <ClCompile Include="EmptyRoom.cpp" />
     <ClCompile Include="MonkGame.cpp" />
+    <ClCompile Include="PublicVariables.cpp" />
+    <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MonkGameClassDiagram.cd" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="Corridor.h" />
     <ClInclude Include="Dungeon.h" />
+    <ClInclude Include="EmptyRoom.h" />
+    <ClInclude Include="PublicVariables.h" />
+    <ClInclude Include="Room.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

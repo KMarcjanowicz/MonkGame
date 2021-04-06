@@ -1,5 +1,24 @@
-﻿  Dungeon.cpp
-  MonkGame.cpp
+﻿  MonkGame.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(27,19): error C3646: "DUNG_MAP": nieznany specyfikator przesłonięcia
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(27,27): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,18): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,18): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,12): error C2086: "int PublicVariables::string": zmiana definicji
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(27): message : zobacz deklarację „PublicVariables::string”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,32): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  PublicVariables.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(27,19): error C3646: "DUNG_MAP": nieznany specyfikator przesłonięcia
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(27,27): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,18): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,18): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,12): error C2086: "int PublicVariables::string": zmiana definicji
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(27): message : zobacz deklarację „PublicVariables::string”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(30,32): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.cpp(11,25): error C2039: „DUNG_MAP”: nie jest składową elementu „PublicVariables”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(2): message : zobacz deklarację „PublicVariables”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.cpp(25,26): error C2039: „DUNG_MAP_PTR”: nie jest składową elementu „PublicVariables”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.h(2): message : zobacz deklarację „PublicVariables”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.cpp(25,50): error C2440: "inicjowanie": nie można konwertować z "std::string (*)[10][10]" na "std::string *"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.cpp(25,39): message : Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji
+  Room.cpp
   Generowanie kodu...
-MonkGame.obj : error LNK2005: Element "private: static class Dungeon * Dungeon::dungeon_" (?dungeon_@Dungeon@@0PAV1@A) jest już zdefiniowany w elemencie Dungeon.obj
-E:\University\Object Oriented Systems Programming\Assignment\MonkGame\Debug\MonkGame.exe : fatal error LNK1169: znaleziono co najmniej jeden wielokrotnie zdefiniowany symbol

@@ -2,12 +2,18 @@
 //
 
 #include <iostream>
+
 #include "Dungeon.h"
+#include "PublicVariables.h"
 
 int main()
 {
+
     std::cout << "Hello World!\n";
+    PublicVariables* variables = PublicVariables::GetInstance();
+    variables->printDungeonMap();
     Dungeon* dungeon = Dungeon::GetInstance();
+    dungeon->generateDungeonMap(variables->DUNG_SIZE_PTR, variables->getDungMap());
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

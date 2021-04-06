@@ -1,5 +1,11 @@
 
 #pragma once
+#include <string>
+#include <vector>
+#include "Room.h"
+
+using namespace std;
+
 class Dungeon
 {
 private:
@@ -22,5 +28,12 @@ public:
      * Finally, any singleton should define some business logic, which can be
      * executed on its instance.
      */
+private:
+    vector<vector<string>> map;
+    vector<vector<Room*>> roomMap;
+public:
+    bool generateDungeonMap(int* sizePointer, vector<vector<string>> map);
+private:
+    int getNumberOfConnections(int id_i_, int id_j_, int* sizePointer);
 };
 
