@@ -143,6 +143,7 @@
     <ClCompile Include="Dungeon.cpp" />
     <ClCompile Include="EmptyRoom.cpp" />
     <ClCompile Include="MonkGame.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="PublicVariables.cpp" />
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="Corridor.h" />
     <ClInclude Include="Dungeon.h" />
     <ClInclude Include="EmptyRoom.h" />
+    <ClInclude Include="PlayerController.h" />
     <ClInclude Include="PublicVariables.h" />
     <ClInclude Include="Room.h" />
   </ItemGroup>

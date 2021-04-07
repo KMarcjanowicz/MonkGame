@@ -28,22 +28,26 @@ Dungeon* Dungeon::GetInstance()
 bool Dungeon::generateDungeonMap(int* sizePointer, vector<vector<string>> map_)
 {
     this->map = map_;
-
-    this->roomMap.resize(*sizePointer);
-    for (int i = 0; i < *sizePointer; i++) {
-        this->roomMap[i].resize(*sizePointer);
-    }
+    int id_i_ = 0;
+    int id_j_ = 0;
+    this->numberOfRooms = 0;
 
     for (int i = 0; i < *sizePointer; i++) {
         for (int j = 0; j < *sizePointer; j++) {
-            if (this->map[i][j] != "X") {
-                //implement function that calculates the amount of connections to the room
-                Corridor* corridor = new Corridor(i, j, getNumberOfConnections(i, j, sizePointer));
-                this->roomMap[i][j] = corridor;
+            if (this->map[i][j] == "P") {
+                id_i_ = i;
+                id_j_ = j;
+                this->numberOfRooms++;
+            }
+            else if (this->map[i][j] != "X") {
+                this->numberOfRooms++;
             }
         }
     }
-
+    Corridor* corridor = new Corridor(id_i_, id_j_, getNumberOfConnections(id_i_, id_j_, sizePointer));
+    //cout << id_i_ << " " << id_j_ << " " << this->numberOfRooms << endl;
+    generateConnections(corridor, sizePointer);
+    //cout << this->roomMap.size();
     return false;
 }
 
@@ -64,4 +68,44 @@ int Dungeon::getNumberOfConnections(int id_i_, int id_j_, int* sizePointer)
     }
 
     return conns_;
+}
+
+void Dungeon::generateConnections(Room* room_, int* sizePointer)
+{
+    
+    int id_i_ = room_->id_i;
+    int id_j_ = room_->id_j;
+    if (!this->roomMap.empty()) {
+        for (int i = 0; i < this->roomMap.size(); i++) {
+            if (this->roomMap[i]->id_i == room_->id_i && this->roomMap[i]->id_j == room_->id_j) {
+                return;
+            }
+        }
+    }
+    
+    this->roomMap.push_back(room_);
+    //cout << id_i_ << " " << id_j_ << " " << room_->connections << endl;
+
+    if (id_i_ - 1 >= 0 && this->map[id_i_ - 1][id_j_] != "X") {
+        Corridor* corridor = new Corridor(id_i_ - 1, id_j_, getNumberOfConnections(id_i_ - 1, id_j_, sizePointer));
+        room_->connected.push_back(corridor);
+        generateConnections(corridor, sizePointer);
+    }
+    if (id_i_ + 1 < *sizePointer && this->map[id_i_ + 1][id_j_] != "X") {
+        Corridor* corridor = new Corridor(id_i_ + 1, id_j_, getNumberOfConnections(id_i_ + 1, id_j_, sizePointer));
+        room_->connected.push_back(corridor);
+        generateConnections(corridor, sizePointer);
+    }
+    if (id_j_ - 1 >= 0 && this->map[id_i_][id_j_ - 1] != "X") {
+        Corridor* corridor = new Corridor(id_i_, id_j_ - 1, getNumberOfConnections(id_i_, id_j_ - 1, sizePointer));
+        room_->connected.push_back(corridor);
+        generateConnections(corridor, sizePointer);
+    }
+    if (id_j_ + 1 < *sizePointer && this->map[id_i_][id_j_ + 1] != "X") {
+        Corridor* corridor = new Corridor(id_i_, id_j_ + 1, getNumberOfConnections(id_i_, id_j_ + 1, sizePointer));
+        room_->connected.push_back(corridor);
+        generateConnections(corridor, sizePointer);
+    }
+
+    return;
 }
