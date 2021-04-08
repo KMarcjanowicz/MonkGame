@@ -44,11 +44,17 @@ bool Dungeon::generateDungeonMap(int* sizePointer, vector<vector<string>> map_)
             }
         }
     }
+
     Corridor* corridor = new Corridor(id_i_, id_j_, getNumberOfConnections(id_i_, id_j_, sizePointer));
     //cout << id_i_ << " " << id_j_ << " " << this->numberOfRooms << endl;
     generateConnections(corridor, sizePointer);
     //cout << this->roomMap.size();
     return false;
+}
+
+Room* Dungeon::getSpawn()
+{
+    return roomMap[0];
 }
 
 int Dungeon::getNumberOfConnections(int id_i_, int id_j_, int* sizePointer)

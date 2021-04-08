@@ -43,6 +43,8 @@ private:
     };
 public:
 	int* DUNG_SIZE_PTR = &DUNG_SIZE;
+    bool gameEnd = false;
+public:
     void printDungeonMap();
     vector<vector<string>> getDungMap();
 };

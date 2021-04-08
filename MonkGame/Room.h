@@ -12,6 +12,7 @@ public:
 	int connections;
 	vector<Room*> connected;
 	string imageName;
+	string type;
 	virtual void enter(void);
 	virtual void leave(void);
 	~Room();

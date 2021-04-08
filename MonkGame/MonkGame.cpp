@@ -3,17 +3,33 @@
 
 #include <iostream>
 
-#include "Dungeon.h"
 #include "PublicVariables.h"
+
+#include "Dungeon.h"
+#include "Player.h"
+#include "PlayerController.h"
+#include "GUI.h"
+
+using namespace std;
 
 int main()
 {
-
+    // dungeon generation
     std::cout << "Hello World!\n";
     PublicVariables* variables = PublicVariables::GetInstance();
-    variables->printDungeonMap();
     Dungeon* dungeon = Dungeon::GetInstance();
     dungeon->generateDungeonMap(variables->DUNG_SIZE_PTR, variables->getDungMap());
+
+    // player spawn
+    Player* player = new Player(10, 0.0f, dungeon->getSpawn());
+    PlayerController* controller = new PlayerController(player);
+    cout << "Starting room: " << controller->player->currentRoom->id_i << " " << controller->player->currentRoom->id_j << endl;
+
+    // main game loop
+    while (!variables->gameEnd) {
+        GUI::printMap(dungeon->map);
+        controller->chooseAction();
+    }
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

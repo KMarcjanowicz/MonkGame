@@ -28,12 +28,14 @@ public:
      * Finally, any singleton should define some business logic, which can be
      * executed on its instance.
      */
-private:
+public:
     vector<vector<string>> map;
     vector<Room*> roomMap;
     int numberOfRooms;
+
 public:
     bool generateDungeonMap(int* sizePointer, vector<vector<string>> map);
+    Room* getSpawn();
 private:
     int getNumberOfConnections(int id_i_, int id_j_, int* sizePointer);
     void generateConnections(Room* room_, int* sizePointer);
