@@ -1,5 +1,7 @@
 #include "Observer.h"
 
+using namespace std;
+
 Observer* Observer::observer_ = nullptr;;
 
 Observer::Observer() {
@@ -19,4 +21,5 @@ Observer* Observer::GetInstance()
 
 void Observer::playerMove(Room* currentRoom_, Room* desiredRoom_)
 {
+    dungeon->changePlayerLocation(currentRoom_, desiredRoom_, player);
 }

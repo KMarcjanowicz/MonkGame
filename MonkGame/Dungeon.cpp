@@ -115,3 +115,23 @@ void Dungeon::generateConnections(Room* room_, int* sizePointer)
 
     return;
 }
+
+bool Dungeon::changePlayerLocation(Room* playerRoom_, Room* desiredRoom_, Player* player_)
+{
+    int current_i = playerRoom_->id_i;
+    int current_j = playerRoom_->id_j;
+    this->map[current_i][current_j] = "O";
+
+    int desired_i = desiredRoom_->id_i;
+    int desired_j = desiredRoom_->id_j;
+    this->map[desired_i][desired_j] = "P";
+
+    for (int i = 0; i < this->roomMap.size(); i++) {
+        if (this->roomMap[i]->id_i == desired_i && this->roomMap[i]->id_j == desired_j) {
+            player_->currentRoom = roomMap[i];
+            break;
+        }
+    }
+
+    return true;
+}

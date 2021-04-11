@@ -1,5 +1,9 @@
 #pragma once
+#include <iostream>
 #include "Room.h"
+#include "Dungeon.h"
+#include "Player.h"
+
 class Observer
 {
 private:
@@ -24,6 +28,11 @@ public:
      */
 
 public:
+    //entities
+    Player* player;
+    Dungeon* dungeon;
+public:
+    //moving th eplayer
     void playerMove(Room* currentRoom_, Room* desiredRoom_);
 
 };

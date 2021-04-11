@@ -10,6 +10,6 @@ public:
 
 public:
 	void chooseAction();
-	void move(vector<Room*> connections_);
+	void move(vector<Room*> connections_, Room* currentRoom_);
 };
 

@@ -19,10 +19,11 @@ void PlayerController::chooseAction()
 			cout << "Choose action: " << endl;
 			cout << "1. Move" << endl;
 			cin >> action;
-
+			cout << "Chosen action: " << action << endl;
 			if (action == 1) {
 				// do move action
-
+				move(this->player->currentRoom->connected, this->player->currentRoom);
+				correct = true;
 			}
 			else {
 				cout << "Wrong action chosen, please retry." << endl;
@@ -32,6 +33,32 @@ void PlayerController::chooseAction()
 	
 }
 
-void PlayerController::move(vector<Room*> connections_)
+void PlayerController::move(vector<Room*> connections_, Room* currentRoom_)
 {
+	string msg = "";
+	int numberOfConnections = connections_.size();
+	int chosenRoom = 0;
+	for (int i = 0; i < numberOfConnections; i++) {
+		if (currentRoom_->id_i < connections_[i]->id_i) {
+			msg = "to the bottom";
+		}
+		if (currentRoom_->id_i > connections_[i]->id_i) {
+			msg = "to the top";
+		}
+		if (currentRoom_->id_j > connections_[i]->id_j) {
+			msg = "on the left";
+		}
+		if (currentRoom_->id_j < connections_[i]->id_j) {
+			msg = "on the right";
+		}
+		cout << i + 1 << ". " << "Go to room " << msg << endl;
+	}
+	cin >> chosenRoom;
+	if (connections_[chosenRoom - 1]) {
+		Observer* observer = Observer::GetInstance();
+		observer->playerMove(this->player->currentRoom, connections_[chosenRoom - 1]);
+	}
+	else {
+		cout << "Wrong number supplied" << endl;
+	}
 }

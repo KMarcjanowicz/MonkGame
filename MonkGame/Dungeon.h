@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "Room.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -35,6 +36,7 @@ public:
 
 public:
     bool generateDungeonMap(int* sizePointer, vector<vector<string>> map);
+    bool changePlayerLocation(Room* playerRoom_, Room* desiredRoom_, Player* player_);
     Room* getSpawn();
 private:
     int getNumberOfConnections(int id_i_, int id_j_, int* sizePointer);

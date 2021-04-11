@@ -8,22 +8,29 @@
 #include "Dungeon.h"
 #include "Player.h"
 #include "PlayerController.h"
+#include "Observer.h"
 #include "GUI.h"
 
 using namespace std;
 
 int main()
 {
-    // dungeon generation
-    std::cout << "Hello World!\n";
+    //pre-game variables
     PublicVariables* variables = PublicVariables::GetInstance();
+
+    // dungeon generation
     Dungeon* dungeon = Dungeon::GetInstance();
     dungeon->generateDungeonMap(variables->DUNG_SIZE_PTR, variables->getDungMap());
 
     // player spawn
-    Player* player = new Player(10, 0.0f, dungeon->getSpawn());
+    Player* player = new Player(10, 0.0f, dungeon->getSpawn(), 15, 3);
     PlayerController* controller = new PlayerController(player);
     cout << "Starting room: " << controller->player->currentRoom->id_i << " " << controller->player->currentRoom->id_j << endl;
+
+    //observer
+    Observer* observer = Observer::GetInstance();
+    observer->player = player;
+    observer->dungeon = dungeon;
 
     // main game loop
     while (!variables->gameEnd) {

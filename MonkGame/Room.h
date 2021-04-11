@@ -10,6 +10,7 @@ public:
 	int id_i;
 	int id_j;
 	int connections;
+	bool visited;
 	vector<Room*> connected;
 	string imageName;
 	string type;

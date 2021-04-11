@@ -150,6 +150,7 @@
     <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="PublicVariables.cpp" />
     <ClCompile Include="Room.cpp" />
+    <ClCompile Include="TreasureRoom.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Corridor.h" />
@@ -162,6 +163,7 @@
     <ClInclude Include="PlayerController.h" />
     <ClInclude Include="PublicVariables.h" />
     <ClInclude Include="Room.h" />
+    <ClInclude Include="TreasureRoom.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
