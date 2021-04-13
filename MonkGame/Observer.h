@@ -34,6 +34,7 @@ public:
 public:
     //moving th eplayer
     void playerMove(Room* currentRoom_, Room* desiredRoom_);
+    void playerPray();
 
 };
 

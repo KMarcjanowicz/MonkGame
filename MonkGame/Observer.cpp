@@ -23,3 +23,8 @@ void Observer::playerMove(Room* currentRoom_, Room* desiredRoom_)
 {
     dungeon->changePlayerLocation(currentRoom_, desiredRoom_, player);
 }
+
+void Observer::playerPray()
+{
+    this->player->addHP();
+}

@@ -2,6 +2,8 @@
 #include <vector>
 #include "Player.h"
 #include "Room.h"
+#include "Observer.h"
+
 class PlayerController
 {
 public:
@@ -11,5 +13,6 @@ public:
 public:
 	void chooseAction();
 	void move(vector<Room*> connections_, Room* currentRoom_);
+	void pray();
 };
 

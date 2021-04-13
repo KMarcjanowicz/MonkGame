@@ -2,6 +2,7 @@
 
 void Entity::addHP()
 {
+	cout << "HP should be added";
 }
 
 void Entity::subtractHP()

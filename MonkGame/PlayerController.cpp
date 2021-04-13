@@ -4,6 +4,8 @@
 
 using namespace std;
 
+Observer* observer = Observer::GetInstance();
+
 PlayerController::PlayerController(Player* player_)
 {
 	this->player = player_;
@@ -27,6 +29,50 @@ void PlayerController::chooseAction()
 			}
 			else {
 				cout << "Wrong action chosen, please retry." << endl;
+				correct = false;
+			}
+		}
+		else if (currentRoomType == "monster") {
+			cout << "FIGHT!" << endl;
+			cout << "Monster fight will be implemented here" << endl << endl;
+
+			cout << "Choose action: " << endl;
+			cout << "1. Move" << endl;
+			cin >> action;
+			cout << "Chosen action: " << action << endl;
+			if (action == 1) {
+				// do move action
+				move(this->player->currentRoom->connected, this->player->currentRoom);
+				correct = true;
+			}
+			else {
+				cout << "Wrong action chosen, please retry." << endl;
+				correct = false;
+			}
+		}
+		else if (currentRoomType == "empty") {
+
+			cout << "Choose action: " << endl;
+			cout << "1. Move" << endl;
+			if (!this->player->currentRoom->visited) {
+				cout << "2. Pray" << endl;
+			}
+			
+			cin >> action;
+			cout << "Chosen action: " << action << endl;
+			if (action == 1) {
+				// do move action
+				move(this->player->currentRoom->connected, this->player->currentRoom);
+				correct = true;
+			}
+			else if (action == 2 && !this->player->currentRoom->visited) {
+				// do pray action
+				pray();
+				correct = false;
+			}
+			else {
+				cout << "Wrong action chosen, please retry." << endl;
+				correct = false;
 			}
 		}
 	}
@@ -61,4 +107,9 @@ void PlayerController::move(vector<Room*> connections_, Room* currentRoom_)
 	else {
 		cout << "Wrong number supplied" << endl;
 	}
+}
+
+void PlayerController::pray()
+	Observer* observer = Observer::GetInstance();
+	observer->playerPray();
 }

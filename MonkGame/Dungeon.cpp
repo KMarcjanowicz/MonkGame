@@ -1,5 +1,8 @@
 #include "Dungeon.h"
 #include "Corridor.h"
+#include "TreasureRoom.h"
+#include "EmptyRoom.h"
+#include "MonsterRoom.h"
 
 #include <iostream>
 
@@ -48,8 +51,16 @@ bool Dungeon::generateDungeonMap(int* sizePointer, vector<vector<string>> map_)
     Corridor* corridor = new Corridor(id_i_, id_j_, getNumberOfConnections(id_i_, id_j_, sizePointer));
     //cout << id_i_ << " " << id_j_ << " " << this->numberOfRooms << endl;
     generateConnections(corridor, sizePointer);
-    //cout << this->roomMap.size();
-    return false;
+    /*
+    cout << this->roomMap.size();
+    cout << endl;
+    for (int i = 0; i < roomMap.size(); i++) {
+        cout << roomMap[i]->type;
+        cout << "   " << roomMap[i]->connections << endl;
+        cout << endl;
+    }
+    */
+    return true;
 }
 
 Room* Dungeon::getSpawn()
@@ -78,7 +89,7 @@ int Dungeon::getNumberOfConnections(int id_i_, int id_j_, int* sizePointer)
 
 void Dungeon::generateConnections(Room* room_, int* sizePointer)
 {
-    
+
     int id_i_ = room_->id_i;
     int id_j_ = room_->id_j;
     if (!this->roomMap.empty()) {
@@ -88,29 +99,98 @@ void Dungeon::generateConnections(Room* room_, int* sizePointer)
             }
         }
     }
-    
+
     this->roomMap.push_back(room_);
     //cout << id_i_ << " " << id_j_ << " " << room_->connections << endl;
 
-    if (id_i_ - 1 >= 0 && this->map[id_i_ - 1][id_j_] != "X") {
+    // corridors
+    if (id_i_ - 1 >= 0 && this->map[id_i_ - 1][id_j_] == "O" || id_i_ - 1 >= 0 && this->map[id_i_ - 1][id_j_] == "P") {
         Corridor* corridor = new Corridor(id_i_ - 1, id_j_, getNumberOfConnections(id_i_ - 1, id_j_, sizePointer));
         room_->connected.push_back(corridor);
         generateConnections(corridor, sizePointer);
     }
-    if (id_i_ + 1 < *sizePointer && this->map[id_i_ + 1][id_j_] != "X") {
+    if (id_i_ + 1 < *sizePointer && this->map[id_i_ + 1][id_j_] == "O" || id_i_ + 1 < *sizePointer && this->map[id_i_ + 1][id_j_] == "P") {
         Corridor* corridor = new Corridor(id_i_ + 1, id_j_, getNumberOfConnections(id_i_ + 1, id_j_, sizePointer));
         room_->connected.push_back(corridor);
         generateConnections(corridor, sizePointer);
     }
-    if (id_j_ - 1 >= 0 && this->map[id_i_][id_j_ - 1] != "X") {
+    if (id_j_ - 1 >= 0 && this->map[id_i_][id_j_ - 1] == "O" || id_j_ - 1 >= 0 && this->map[id_i_][id_j_ - 1] == "P") {
         Corridor* corridor = new Corridor(id_i_, id_j_ - 1, getNumberOfConnections(id_i_, id_j_ - 1, sizePointer));
         room_->connected.push_back(corridor);
         generateConnections(corridor, sizePointer);
     }
-    if (id_j_ + 1 < *sizePointer && this->map[id_i_][id_j_ + 1] != "X") {
+    if (id_j_ + 1 < *sizePointer && this->map[id_i_][id_j_ + 1] == "O" || id_j_ + 1 < *sizePointer && this->map[id_i_][id_j_ + 1] == "P") {
         Corridor* corridor = new Corridor(id_i_, id_j_ + 1, getNumberOfConnections(id_i_, id_j_ + 1, sizePointer));
         room_->connected.push_back(corridor);
         generateConnections(corridor, sizePointer);
+    }
+
+    // treasure room
+    if (id_i_ - 1 >= 0 && this->map[id_i_ - 1][id_j_] == "T") {
+        TreasureRoom* treasure = new TreasureRoom(id_i_ - 1, id_j_, getNumberOfConnections(id_i_ - 1, id_j_, sizePointer));
+        room_->connected.push_back(treasure);
+        generateConnections(treasure, sizePointer);
+    }
+    if (id_i_ + 1 < *sizePointer && this->map[id_i_ + 1][id_j_] == "T") {
+        TreasureRoom* treasure = new TreasureRoom(id_i_ + 1, id_j_, getNumberOfConnections(id_i_ + 1, id_j_, sizePointer));
+        room_->connected.push_back(treasure);
+        generateConnections(treasure, sizePointer);
+    }
+    if (id_j_ - 1 >= 0 && this->map[id_i_][id_j_ - 1] == "T") {
+        TreasureRoom* treasure = new TreasureRoom(id_i_, id_j_ - 1, getNumberOfConnections(id_i_, id_j_ - 1, sizePointer));
+        room_->connected.push_back(treasure);
+        generateConnections(treasure, sizePointer);
+    }
+    if (id_j_ + 1 < *sizePointer && this->map[id_i_][id_j_ + 1] == "T") {
+        TreasureRoom* treasure = new TreasureRoom(id_i_, id_j_ + 1, getNumberOfConnections(id_i_, id_j_ + 1, sizePointer));
+        room_->connected.push_back(treasure);
+        generateConnections(treasure, sizePointer);
+    }
+
+    //empty room
+
+    if (id_i_ - 1 >= 0 && this->map[id_i_ - 1][id_j_] == "E") {
+        EmptyRoom* empty = new EmptyRoom(id_i_ - 1, id_j_, getNumberOfConnections(id_i_ - 1, id_j_, sizePointer));
+        room_->connected.push_back(empty);
+        generateConnections(empty, sizePointer);
+    }
+    if (id_i_ + 1 < *sizePointer && this->map[id_i_ + 1][id_j_] == "E") {
+        EmptyRoom* empty = new EmptyRoom(id_i_ + 1, id_j_, getNumberOfConnections(id_i_ + 1, id_j_, sizePointer));
+        room_->connected.push_back(empty);
+        generateConnections(empty, sizePointer);
+    }
+    if (id_j_ - 1 >= 0 && this->map[id_i_][id_j_ - 1] == "E") {
+        EmptyRoom* empty = new EmptyRoom(id_i_, id_j_ - 1, getNumberOfConnections(id_i_, id_j_ - 1, sizePointer));
+        room_->connected.push_back(empty);
+        generateConnections(empty, sizePointer);
+    }
+    if (id_j_ + 1 < *sizePointer && this->map[id_i_][id_j_ + 1] == "E") {
+        EmptyRoom* empty = new EmptyRoom(id_i_, id_j_ + 1, getNumberOfConnections(id_i_, id_j_ + 1, sizePointer));
+        room_->connected.push_back(empty);
+        generateConnections(empty, sizePointer);
+    }
+
+    //monster room
+
+    if (id_i_ - 1 >= 0 && this->map[id_i_ - 1][id_j_] == "M") {
+        MonsterRoom* monster = new MonsterRoom(id_i_ - 1, id_j_, getNumberOfConnections(id_i_ - 1, id_j_, sizePointer));
+        room_->connected.push_back(monster);
+        generateConnections(monster, sizePointer);
+    }
+    if (id_i_ + 1 < *sizePointer && this->map[id_i_ + 1][id_j_] == "M") {
+        MonsterRoom* monster = new MonsterRoom(id_i_ + 1, id_j_, getNumberOfConnections(id_i_ + 1, id_j_, sizePointer));
+        room_->connected.push_back(monster);
+        generateConnections(monster, sizePointer);
+    }
+    if (id_j_ - 1 >= 0 && this->map[id_i_][id_j_ - 1] == "M") {
+        MonsterRoom* monster = new MonsterRoom(id_i_, id_j_ - 1, getNumberOfConnections(id_i_, id_j_ - 1, sizePointer));
+        room_->connected.push_back(monster);
+        generateConnections(monster, sizePointer);
+    }
+    if (id_j_ + 1 < *sizePointer && this->map[id_i_][id_j_ + 1] == "M") {
+        MonsterRoom* monster = new MonsterRoom(id_i_, id_j_ + 1, getNumberOfConnections(id_i_, id_j_ + 1, sizePointer));
+        room_->connected.push_back(monster);
+        generateConnections(monster, sizePointer);
     }
 
     return;

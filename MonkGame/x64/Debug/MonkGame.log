@@ -1,3 +1,5 @@
-﻿  GUI.cpp
-E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\GUI.cpp(4,24): warning C4309: "inicjowanie": obcięcie stałej wartości
+﻿  MonkGame.cpp
+  PlayerController.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.cpp(85,47): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  Generowanie kodu...
   MonkGame.vcxproj -> E:\University\Object Oriented Systems Programming\Assignment\MonkGame\x64\Debug\MonkGame.exe

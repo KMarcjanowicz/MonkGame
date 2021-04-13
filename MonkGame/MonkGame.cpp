@@ -15,6 +15,7 @@ using namespace std;
 
 int main()
 {
+    char debug = 'q'; 
     //pre-game variables
     PublicVariables* variables = PublicVariables::GetInstance();
 
@@ -25,16 +26,35 @@ int main()
     // player spawn
     Player* player = new Player(10, 0.0f, dungeon->getSpawn(), 15, 3);
     PlayerController* controller = new PlayerController(player);
-    cout << "Starting room: " << controller->player->currentRoom->id_i << " " << controller->player->currentRoom->id_j << endl;
 
     //observer
     Observer* observer = Observer::GetInstance();
+    cout << player->HP;
     observer->player = player;
     observer->dungeon = dungeon;
 
+    do {
+        cout << "Debug mode: (y/n)";
+        cin >> debug;
+    } while (debug != 'n' && debug != 'y');
+
+    if (debug == 'y') {
+        cout << "Starting room: " << controller->player->currentRoom->id_i << " " << controller->player->currentRoom->id_j << endl;
+    }
     // main game loop
     while (!variables->gameEnd) {
-        GUI::printMap(dungeon->map);
+        if (debug == 'n') {
+            GUI::ClearConsole();
+        }
+
+        GUI::PrintRoomType(player->currentRoom);
+
+        if (debug == 'y') {
+            GUI::PrintMapDebug(dungeon->map);
+        }
+        else {
+            GUI::PrintMap(dungeon->map);
+        }
         controller->chooseAction();
     }
 }
