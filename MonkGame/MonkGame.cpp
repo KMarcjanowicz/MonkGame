@@ -29,7 +29,6 @@ int main()
 
     //observer
     Observer* observer = Observer::GetInstance();
-    cout << player->HP;
     observer->player = player;
     observer->dungeon = dungeon;
 

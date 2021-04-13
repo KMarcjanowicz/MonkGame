@@ -1,6 +1,7 @@
 #include "PlayerController.h"
 #include <iostream>
 #include "Observer.h"
+#include "EmptyRoom.h"
 
 using namespace std;
 
@@ -52,9 +53,11 @@ void PlayerController::chooseAction()
 		}
 		else if (currentRoomType == "empty") {
 
+			EmptyRoom* emptyRoom = dynamic_cast<EmptyRoom*>(this->player->currentRoom);  // Works
+
 			cout << "Choose action: " << endl;
 			cout << "1. Move" << endl;
-			if (!this->player->currentRoom->visited) {
+			if (!emptyRoom->prayed) {
 				cout << "2. Pray" << endl;
 			}
 			
@@ -65,7 +68,7 @@ void PlayerController::chooseAction()
 				move(this->player->currentRoom->connected, this->player->currentRoom);
 				correct = true;
 			}
-			else if (action == 2 && !this->player->currentRoom->visited) {
+			else if (action == 2 && !emptyRoom->prayed) {
 				// do pray action
 				pray();
 				correct = false;
@@ -110,6 +113,7 @@ void PlayerController::move(vector<Room*> connections_, Room* currentRoom_)
 }
 
 void PlayerController::pray()
+{
 	Observer* observer = Observer::GetInstance();
 	observer->playerPray();
 }

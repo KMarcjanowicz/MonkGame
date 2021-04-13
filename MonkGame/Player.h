@@ -12,5 +12,7 @@ public:
 	float score;
 public:
 	void checkStatus();
+
+	void addHP();
 };
 

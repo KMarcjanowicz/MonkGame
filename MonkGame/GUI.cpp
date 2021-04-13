@@ -56,5 +56,5 @@ void GUI::ClearConsole()
 
 void GUI::PrintRoomType(Room* room_)
 {
-    cout << "PLayer is in room: " << room_->type << endl;
+    cout << "Player is in room: " << room_->type << endl;
 }

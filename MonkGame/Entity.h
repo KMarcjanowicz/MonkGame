@@ -10,6 +10,8 @@ class Entity
 public:
 	int HP;
 	int AP;
+	int currentHP;
+	int currentAP;
 	string desc;
 	string name;
 	string type;
