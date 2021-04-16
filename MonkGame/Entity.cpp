@@ -25,7 +25,11 @@ void Entity::defend()
 {
 }
 
-void Entity::update()
+void Entity::Update()
+{
+}
+
+Entity::~Entity()
 {
 }
 

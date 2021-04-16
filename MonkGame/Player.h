@@ -11,8 +11,7 @@ public:
 	int money;
 	float score;
 public:
-	void checkStatus();
-
 	void addHP();
+	void playerName();
 };
 

@@ -2,10 +2,11 @@
 #include <string>
 #include <iostream>
 #include "Room.h"
+#include "IFightObserver.h"
 
 using namespace std;
 
-class Entity
+class Entity : public IFightObserver
 {
 public:
 	int HP;
@@ -24,6 +25,7 @@ public:
 	void attack(Entity* opponent_);
 	void defend();
 
-	void update();
+	void Update();
+	virtual ~Entity();
 };
 

@@ -1,5 +1,13 @@
-﻿  GUI.cpp
+﻿  AI.cpp
+  Dungeon.cpp
+  Entity.cpp
+  Goblin.cpp
+  GUI.cpp
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\GUI.cpp(4,24): warning C4309: "inicjowanie": obcięcie stałej wartości
+  IFightObserver.cpp
+  MonkGame.cpp
+  MonsterRoom.cpp
+  Observer.cpp
   Player.cpp
   PlayerController.cpp
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.cpp(88,47): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
