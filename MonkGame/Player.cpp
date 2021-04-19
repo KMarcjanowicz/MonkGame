@@ -54,3 +54,7 @@ void Player::playerName()
 	Sleep(3000);
 	system("pause");
 }
+
+void Player::Update(string message_)
+{
+}

@@ -1,7 +1,10 @@
 #pragma once
+#include <string>
 #include "Entity.h"
 #include "Room.h"
 #include "PlayerController.h"
+
+using namespace std;
 
 class Player :
 	public Entity
@@ -11,9 +14,10 @@ public:
 	~Player();
 	int money;
 	float score;
-	PlayerController* controller;
 public:
 	void AddHP();
 	void playerName();
+
+	void Update(string message_);
 };
 

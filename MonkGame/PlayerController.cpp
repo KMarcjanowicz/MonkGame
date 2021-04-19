@@ -5,11 +5,23 @@
 
 using namespace std;
 
-Observer* observer = Observer::GetInstance();
+PlayerController* PlayerController::playerController_ = nullptr;;
 
 PlayerController::PlayerController(Player* player_)
 {
 	this->player = player_;
+}
+
+PlayerController* PlayerController::GetInstance(Player* player_)
+{
+	/**
+	 * This is a safer way to create an instance. instance = new Singleton is
+	 * dangeruous in case two instance threads wants to access at the same time
+	 */
+	if (playerController_ == nullptr) {
+		playerController_ = new PlayerController(player_);
+	}
+	return playerController_;
 }
 
 void PlayerController::chooseAction()
