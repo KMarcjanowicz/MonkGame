@@ -1,31 +1,39 @@
 #include "Entity.h"
 
-void Entity::addHP()
+void Entity::AddHP()
 {
 	cout << "HP should be added";
 }
 
-void Entity::subtractHP()
+void Entity::SubtractHP()
 {
 }
 
-void Entity::addAP()
+void Entity::AddAP()
 {
 }
 
-void Entity::subtractAP()
+void Entity::SubtractAP()
 {
 }
 
-void Entity::attack(Entity* opponent_)
+void Entity::Attack(Entity* opponent_)
 {
 }
 
-void Entity::defend()
+void Entity::Defend()
 {
 }
 
 void Entity::Update()
+{
+}
+
+void Entity::Update(string message_)
+{
+}
+
+void Entity::Update(string message_, int value_)
 {
 }
 

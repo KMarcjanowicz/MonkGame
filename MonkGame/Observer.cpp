@@ -1,4 +1,7 @@
 #include "Observer.h"
+#include "MonsterRoom.h"
+#include "Goblin.h"
+#include "FightSubject.h"
 
 using namespace std;
 
@@ -19,12 +22,34 @@ Observer* Observer::GetInstance()
     return observer_;
 }
 
-void Observer::playerMove(Room* currentRoom_, Room* desiredRoom_)
+void Observer::PlayerFight(Player* player_, Room* room_)
+{
+    MonsterRoom* monsterRoom = dynamic_cast<MonsterRoom*>(room_);
+    vector<Entity*>monsters = monsterRoom->monsters;
+    //cout << monsters.size();
+
+    FightSubject* FightObject = new FightSubject();
+    FightObject->Attach(player_);
+    for (int i = 0; i < monsters.size(); i++)
+    {
+        FightObject->Attach(monsters[i]);
+    }
+
+    while (FightObject->HowManyFighters() > 1)
+    {
+
+    }
+
+
+    delete FightObject;
+}
+
+void Observer::PlayerMove(Room* currentRoom_, Room* desiredRoom_)
 {
     dungeon->changePlayerLocation(currentRoom_, desiredRoom_, player);
 }
 
-void Observer::playerPray()
+void Observer::PlayerPray()
 {
-    this->player->addHP();
+    this->player->AddHP();
 }

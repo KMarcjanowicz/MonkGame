@@ -33,8 +33,8 @@ public:
     Dungeon* dungeon;
 public:
     //moving th eplayer
-    void playerMove(Room* currentRoom_, Room* desiredRoom_);
-    void playerPray();
-
+    void PlayerMove(Room* currentRoom_, Room* desiredRoom_);
+    void PlayerPray();
+    void PlayerFight(Player* player_, Room* room_);
 };
 

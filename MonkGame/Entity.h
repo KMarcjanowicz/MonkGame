@@ -18,14 +18,17 @@ public:
 	string type;
 	Room* currentRoom;
 public:
-	void addHP();
-	void subtractHP();
-	void addAP();
-	void subtractAP();
-	void attack(Entity* opponent_);
-	void defend();
+	void AddHP();
+	void SubtractHP();
+	void AddAP();
+	void SubtractAP();
+	void Attack(Entity* opponent_);
+	void Defend();
 
 	void Update();
+	void Update(string message_);
+	void Update(string message_, int value_);
+
 	virtual ~Entity();
 };
 

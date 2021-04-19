@@ -24,7 +24,7 @@ Player::~Player()
 {
 }
 
-void Player::addHP()
+void Player::AddHP()
 {
 	cout << "Current HP: " << currentHP << ", max HP: " << HP << endl;
 	cout << "Praying will heal up to 10 HP." << endl;

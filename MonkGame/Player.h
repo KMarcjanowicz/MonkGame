@@ -1,6 +1,7 @@
 #pragma once
 #include "Entity.h"
 #include "Room.h"
+#include "PlayerController.h"
 
 class Player :
 	public Entity
@@ -10,8 +11,9 @@ public:
 	~Player();
 	int money;
 	float score;
+	PlayerController* controller;
 public:
-	void addHP();
+	void AddHP();
 	void playerName();
 };
 

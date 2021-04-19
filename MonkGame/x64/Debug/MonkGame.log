@@ -1,10 +1,11 @@
-﻿  AI.cpp
-  Dungeon.cpp
+﻿  Dungeon.cpp
   Entity.cpp
-  Goblin.cpp
+  FightSubject.cpp
   GUI.cpp
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\GUI.cpp(4,24): warning C4309: "inicjowanie": obcięcie stałej wartości
+  Goblin.cpp
   IFightObserver.cpp
+  IFightSubject.cpp
   MonkGame.cpp
   MonsterRoom.cpp
   Observer.cpp
