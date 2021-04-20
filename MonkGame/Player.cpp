@@ -19,6 +19,7 @@ Player::~Player()
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void Player::AddHP()
 =======
 void Player::checkStatus()
@@ -27,6 +28,9 @@ void Player::checkStatus()
 
 void Player::addHP()
 >>>>>>> parent of 4c7b700 (eee)
+=======
+void Player::addHP()
+>>>>>>> parent of c5fdc97 (Start Combat)
 {
 	cout << "Current HP: " << currentHP << ", max HP: " << HP << endl;
 	cout << "You can heal max: " << HP - currentHP << endl;

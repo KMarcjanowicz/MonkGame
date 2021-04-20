@@ -17,15 +17,16 @@ public:
 	string type;
 	Room* currentRoom;
 public:
-	void AddHP();
-	void SubtractHP();
-	void AddAP();
-	void SubtractAP();
-	void Attack(Entity* opponent_);
-	void Defend();
+	void addHP();
+	void subtractHP();
+	void addAP();
+	void subtractAP();
+	void attack(Entity* opponent_);
+	void defend();
 
 <<<<<<< HEAD
 	void Update();
+<<<<<<< HEAD
 	void Update(string message_);
 	void Update(string message_, int value_);
 
@@ -33,5 +34,8 @@ public:
 =======
 	void update();
 >>>>>>> parent of 4c7b700 (eee)
+=======
+	virtual ~Entity();
+>>>>>>> parent of c5fdc97 (Start Combat)
 };
 

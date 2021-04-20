@@ -39,9 +39,12 @@ public:
 	void chooseAction();
 	void move(vector<Room*> connections_, Room* currentRoom_);
 	void pray();
+<<<<<<< HEAD
 	void fight();
     void AttachPlayer(Player* player_);
 
     void FightInterface(list<Entity*> fighters_, int myIterator_, FightSubject* master_);
+=======
+>>>>>>> parent of c5fdc97 (Start Combat)
 };
 

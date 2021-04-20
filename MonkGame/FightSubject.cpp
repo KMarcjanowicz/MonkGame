@@ -1,4 +1,5 @@
 #include "FightSubject.h"
+<<<<<<< HEAD
 #include "Player.h"
 #include <string>
 
@@ -93,3 +94,5 @@ void FightSubject::DecideTurn()
 void FightSubject::TurnResult()
 {
 }
+=======
+>>>>>>> parent of c5fdc97 (Start Combat)

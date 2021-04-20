@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿  Dungeon.cpp
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
@@ -23,6 +24,12 @@ E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\P
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(36,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(43,23): error C2061: błąd składniowy: identyfikator „Player”
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\FightSubject.cpp(73,30): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+=======
+﻿  AI.cpp
+  Dungeon.cpp
+  Entity.cpp
+  Goblin.cpp
+>>>>>>> parent of c5fdc97 (Start Combat)
   GUI.cpp
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Dungeon.h(39,70): error C2061: błąd składniowy: identyfikator „Player”
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
@@ -34,6 +41,10 @@ E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\P
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(36,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(43,23): error C2061: błąd składniowy: identyfikator „Player”
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\GUI.cpp(4,24): warning C4309: "inicjowanie": obcięcie stałej wartości
+<<<<<<< HEAD
+=======
+  IFightObserver.cpp
+>>>>>>> parent of c5fdc97 (Start Combat)
   MonkGame.cpp
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
 E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int

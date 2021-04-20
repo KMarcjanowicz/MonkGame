@@ -49,8 +49,8 @@ void PlayerController::chooseAction()
 			}
 		}
 		else if (currentRoomType == "monster") {
-
-			fight();
+			cout << "FIGHT!" << endl;
+			cout << "Monster fight will be implemented here" << endl << endl;
 
 			cout << "Choose action: " << endl;
 			cout << "1. Move" << endl;
@@ -120,7 +120,7 @@ void PlayerController::move(vector<Room*> connections_, Room* currentRoom_)
 	cin >> chosenRoom;
 	if (connections_[chosenRoom - 1]) {
 		Observer* observer = Observer::GetInstance();
-		observer->PlayerMove(this->player->currentRoom, connections_[chosenRoom - 1]);
+		observer->playerMove(this->player->currentRoom, connections_[chosenRoom - 1]);
 	}
 	else {
 		cout << "Wrong number supplied" << endl;
@@ -130,13 +130,7 @@ void PlayerController::move(vector<Room*> connections_, Room* currentRoom_)
 void PlayerController::pray()
 {
 	Observer* observer = Observer::GetInstance();
-	observer->PlayerPray();
-}
-
-void PlayerController::fight()
-{
-	Observer* observer = Observer::GetInstance();
-	observer->PlayerFight(player, player->currentRoom);
+	observer->playerPray();
 }
 
 void PlayerController::AttachPlayer(Player* player_)

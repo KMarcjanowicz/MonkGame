@@ -1,27 +1,27 @@
 #include "Entity.h"
 
-void Entity::AddHP()
+void Entity::addHP()
 {
 	cout << "HP should be added";
 }
 
-void Entity::SubtractHP()
+void Entity::subtractHP()
 {
 }
 
-void Entity::AddAP()
+void Entity::addAP()
 {
 }
 
-void Entity::SubtractAP()
+void Entity::subtractAP()
 {
 }
 
-void Entity::Attack(Entity* opponent_)
+void Entity::attack(Entity* opponent_)
 {
 }
 
-void Entity::Defend()
+void Entity::defend()
 {
 }
 
@@ -30,6 +30,7 @@ void Entity::Update()
 {
 }
 
+<<<<<<< HEAD
 void Entity::Update(string message_)
 {
 	cout << message_ << endl;
@@ -39,6 +40,8 @@ void Entity::Update(string message_, int value_)
 {
 }
 
+=======
+>>>>>>> parent of c5fdc97 (Start Combat)
 Entity::~Entity()
 =======
 void Entity::update()

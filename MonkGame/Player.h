@@ -2,7 +2,6 @@
 #include <string>
 #include "Entity.h"
 #include "Room.h"
-#include "PlayerController.h"
 
 using namespace std;
 
@@ -16,7 +15,11 @@ public:
 	float score;
 public:
 <<<<<<< HEAD
+<<<<<<< HEAD
 	void AddHP();
+=======
+	void addHP();
+>>>>>>> parent of c5fdc97 (Start Combat)
 	void playerName();
 
 	~Player();

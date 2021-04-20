@@ -36,8 +36,8 @@ public:
     int currentTurn = NULL;
 public:
     //moving th eplayer
-    void PlayerMove(Room* currentRoom_, Room* desiredRoom_);
-    void PlayerPray();
-    void PlayerFight(Player* player_, Room* room_);
+    void playerMove(Room* currentRoom_, Room* desiredRoom_);
+    void playerPray();
+
 };
 
