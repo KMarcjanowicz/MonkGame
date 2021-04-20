@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "EmptyRoom.h"
+#include <string>
 
 #ifdef _WIN32
 #include <Windows.h>
@@ -48,8 +49,9 @@ void Player::playerName()
 {
 	cout << "What is your name: ";
 	cin >> name;
+	cin.ignore();
 	cout << endl << "How are you as a person: ";
-	cin >> desc;
+	getline(cin, desc);
 	cout << endl << "Now your adventure begins! " << this->name << ", I will look forward to hearing about your adventures!" << endl;
 	//Sleep(3000);
 	system("pause");

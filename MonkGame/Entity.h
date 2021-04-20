@@ -18,8 +18,8 @@ public:
 	string type;
 	Room* currentRoom;
 public:
-	void addHP();
-	void subtractHP();
+	void addHP(int value_);
+	void subtractHP(int value_);
 	void addAP();
 	void subtractAP();
 	void attack(Entity* opponent_);

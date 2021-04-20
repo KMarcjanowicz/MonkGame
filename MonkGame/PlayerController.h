@@ -39,4 +39,5 @@ public:
     void move(vector<Room*> connections_, Room* currentRoom_);
     void pray();
     void fight();
+    void FightInterface(list<Entity*> fighters_, int myIterator_, FightSubject* master_);
 };

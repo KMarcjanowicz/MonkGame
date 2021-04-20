@@ -1,5 +1,17 @@
-﻿  FightSubject.cpp
-E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\FightSubject.cpp(30,30): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+﻿  AI.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\AI.cpp(7,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Entity.cpp
+  FightSubject.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\FightSubject.cpp(32,30): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  GUI.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\GUI.cpp(4,24): warning C4309: "inicjowanie": obcięcie stałej wartości
+  Goblin.cpp
+  MonkGame.cpp
   MonsterRoom.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\MonsterRoom.cpp(20,31): warning C4101: "ex": lokalna zmienna, do której nie istnieje odwołanie
+  Observer.cpp
+  PlayerController.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.cpp(121,47): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.cpp(163,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
   Generowanie kodu...
   MonkGame.vcxproj -> E:\University\Object Oriented Systems Programming\Assignment\MonkGame\x64\Debug\MonkGame.exe

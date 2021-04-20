@@ -81,3 +81,24 @@ void GUI::StartScreen()
     // Close the file
     MyFile.close();
 }
+
+void GUI::FightScreen(Goblin* goblin_)
+{
+    cout << "You have been attacked by a " << goblin_->type << "!" << endl;
+    // Create and open a text file
+    ifstream  MyFile("Screens/Goblin.txt");
+
+    // Create a text string, which is used to output the text file
+    string myText;
+
+    // Use a while loop together with the getline() function to read the file line by line
+    while (getline(MyFile, myText)) {
+        // Output the text from the file
+        cout << myText << endl;
+    }
+
+    // Close the file
+    MyFile.close();
+
+    cout << goblin_->type << ", HP: " << goblin_->currentHP << " / " << goblin_->HP << " AP: " << goblin_->AP << endl;
+}

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include "Player.h"
+#include "Goblin.h"
 
 #include "Room.h"
 
@@ -22,5 +23,6 @@ public:
 	static void PrintRoomType(Room* room_);
 	static void PrintPlayerInfo(Player* player_);
 	static void StartScreen();
+	static void FightScreen(Goblin* goblin_);
 };
 

@@ -8,5 +8,6 @@ class MonsterRoom :
 public:
     vector<Entity*> monsters;
     MonsterRoom(int id_i_, int id_j_, int conns_);
+    void deleteMonsters();
 };
 

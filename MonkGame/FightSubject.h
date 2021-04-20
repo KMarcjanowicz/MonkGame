@@ -25,6 +25,9 @@ public:
     int DecideTurn();
     void NotifyTurn(int turn_);
 
+    void Update(string msg_, Entity* entity_, int value_);
+    void FightResult(list<Entity*> fighters_, Entity* looser_);
+
 private:
     list<Entity*> fighters;
     string message;

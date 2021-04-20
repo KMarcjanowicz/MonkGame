@@ -37,7 +37,9 @@ int main()
         cout << "Debug mode: (y/n)";
         cin >> debug;
     } while (debug != 'n' && debug != 'y');
+
     GUI::StartScreen();
+
     player->playerName();
     if (debug == 'y') {
         cout << "Player controller is now a singleton" << endl;

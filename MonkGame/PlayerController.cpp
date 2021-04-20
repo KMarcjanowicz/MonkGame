@@ -3,6 +3,11 @@
 #include "Observer.h"
 #include "EmptyRoom.h"
 #include "GUI.h"
+#include <list>
+#include "Goblin.h"
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+#include "MonsterRoom.h"
 
 using namespace std;
 
@@ -48,7 +53,22 @@ void PlayerController::chooseAction()
 		}
 		else if (currentRoomType == "monster") {
 
-			fight();
+			bool possibleFight = false;
+			MonsterRoom* mRoom = dynamic_cast<MonsterRoom*>(this->player->currentRoom);
+			cout << mRoom->monsters.size() << endl;
+			system("pause");
+
+			if (mRoom->monsters.size() > 0) {
+				for (int i = 0; i < mRoom->monsters.size(); i++) {
+					if (mRoom->monsters[i]->currentHP > 0) {
+						possibleFight = true;
+						break;
+					}
+				}
+			}
+			if (possibleFight) {
+				fight();
+			}
 
 			cout << "Choose action: " << endl;
 			cout << "1. Move" << endl;
@@ -135,4 +155,54 @@ void PlayerController::fight()
 {
 	Observer* observer = Observer::GetInstance();
 	observer->PlayerFight(player, player->currentRoom);
+}
+
+void PlayerController::FightInterface(list<Entity*> fighters_, int myIterator_, FightSubject* master_)
+{
+	/* initialize random seed: */
+	srand(time(NULL));
+
+	int action;
+	GUI::ClearConsole();
+	GUI::PrintPlayerInfo(this->player);
+	list<Entity*>::iterator iterator = fighters_.begin();
+	Goblin* goblin = NULL;
+
+	while (iterator != fighters_.end()) {
+		if ((*iterator)->type != "player") {
+			goblin = dynamic_cast<Goblin*>((*iterator));
+		}
+		++iterator;
+	}
+
+	GUI::FightScreen(goblin);
+
+	cout << "Choose action: " << endl;
+	cout << "1. Attack" << endl;
+	cout << "2. Defend" << endl;
+	cout << "Perform: ";
+	cin >> action;
+
+	if (action == 1) {
+		//do something
+		cout << "========== ATTACK! ==========" << endl;
+		/* generate secret number between 1 and 10: */
+		int success = rand() * 47 % 100 + 1;
+		cout << success << endl;
+		if (success >= 50) {
+			master_->Update("attack", goblin, this->player->AP);
+		}
+	}
+	else if (action == 2)
+	{
+		//do something else
+		cout << "========== DEFEND! ==========" << endl;
+		int success = rand() * 47 % 100 + 1;
+		if (success >= 50) {
+			master_->Update("defend", this->player, 1);
+		}
+	}
+	else {
+		FightInterface(fighters_, myIterator_, master_);
+	}
 }
