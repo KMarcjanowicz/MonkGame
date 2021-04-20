@@ -6,24 +6,26 @@
 
 using namespace std;
 
-PlayerController* PlayerController::playerController_ = nullptr;;
+//PlayerController* PlayerController::playerController_ = nullptr;;
 
 PlayerController::PlayerController()
 {
+	player = NULL;
 }
 
-
+/*
 PlayerController* PlayerController::GetInstance()
 {
 	/**
 	 * This is a safer way to create an instance. instance = new Singleton is
 	 * dangeruous in case two instance threads wants to access at the same time
-	 */
+	 
 	if (playerController_ == nullptr) {
 		playerController_ = new PlayerController();
 	}
 	return playerController_;
 }
+*/
 
 void PlayerController::chooseAction()
 {

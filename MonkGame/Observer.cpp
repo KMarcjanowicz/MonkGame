@@ -28,6 +28,7 @@ void Observer::PlayerFight(Player* player_, Room* room_)
     vector<Entity*>monsters = monsterRoom->monsters;
     //cout << monsters.size();
 
+    /*
     FightSubject* FightObject = new FightSubject();
     FightObject->Attach(player_);
     for (int i = 0; i < monsters.size(); i++)
@@ -42,6 +43,7 @@ void Observer::PlayerFight(Player* player_, Room* room_)
 
 
     delete FightObject;
+    */
 }
 
 void Observer::PlayerMove(Room* currentRoom_, Room* desiredRoom_)

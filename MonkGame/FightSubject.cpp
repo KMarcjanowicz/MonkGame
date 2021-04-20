@@ -1,5 +1,6 @@
 #include "FightSubject.h"
 #include "Player.h"
+#include <string>
 
 FightSubject::FightSubject()
 {
@@ -35,6 +36,7 @@ void FightSubject::Notify()
 
 void FightSubject::NotifyTurn()
 {
+	/*
 	int i = 0;
 	list<Entity*>::iterator iterator = fighters.begin();
 	HowManyFighters();
@@ -53,6 +55,7 @@ void FightSubject::NotifyTurn()
 		++iterator;
 		++i;
 	}
+	*/
 }
 
 void FightSubject::Update()
@@ -83,7 +86,8 @@ void FightSubject::DecideTurn()
 			this->currentTurn = 0;
 		}
 	}
-	NotifyTurn();
+	CreateMessage("Turn has been decided, starts: " + to_string(this->currentTurn));
+	Notify();
 }
 
 void FightSubject::TurnResult()

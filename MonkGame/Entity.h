@@ -29,6 +29,6 @@ public:
 	void Update(string message_);
 	void Update(string message_, int value_);
 
-	virtual ~Entity();
+	~Entity();
 };
 

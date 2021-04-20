@@ -25,7 +25,7 @@ int main()
 
     // player spawn
     Player* player = new Player(10, 0.0f, dungeon->getSpawn(), 15, 3);
-    PlayerController* controller = PlayerController::GetInstance();
+    PlayerController* controller = new PlayerController();
     controller->AttachPlayer(player);
 
     //observer

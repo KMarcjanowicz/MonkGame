@@ -10,28 +10,29 @@ using namespace std;
 
 class PlayerController
 {
-private:
-	PlayerController();
+//private:
+	//PlayerController();
 
-	static PlayerController* playerController_;
+	//static PlayerController* playerController_;
 
 public:
     /**
      * Singletons should not be cloneable.
      */
-    PlayerController(PlayerController& other) = delete;
+    //PlayerController(PlayerController& other) = delete;
     /**
      * Singletons should not be assignable.
      */
-    void operator=(const PlayerController&) = delete;
+   // void operator=(const PlayerController&) = delete;
 
-    static PlayerController* GetInstance();
+    //static PlayerController* GetInstance();
     /**
      * Finally, any singleton should define some business logic, which can be
      * executed on its instance.
      */
 
 public:
+    PlayerController();
 	Player* player;
 
 public:

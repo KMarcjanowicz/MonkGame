@@ -1,0 +1,85 @@
+﻿  AI.cpp
+  Corridor.cpp
+  Dungeon.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,19): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(35,12): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(35,12): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(35,21): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(41,22): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(42,23): error C2061: błąd składniowy: identyfikator „Player”
+  EmptyRoom.cpp
+  Entity.cpp
+  FightSubject.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Dungeon.h(39,70): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,19): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(41,22): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(42,23): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\FightSubject.cpp(70,30): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  Goblin.cpp
+  GUI.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Dungeon.h(39,70): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,19): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(41,22): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(42,23): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\GUI.cpp(4,24): warning C4309: "inicjowanie": obcięcie stałej wartości
+  IFightObserver.cpp
+  IFightSubject.cpp
+  MonkGame.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,19): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(35,12): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(35,12): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(35,21): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(41,22): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(42,23): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\MonkGame.cpp(29,36): error C2660: "PlayerController::AttachPlayer": funkcja nie przyjmuje 1 argumentów
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(42,10): message : zobacz deklarację „PlayerController::AttachPlayer”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\MonkGame.cpp(33,15): error C2039: „player”: nie jest składową elementu „Observer”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(9): message : zobacz deklarację „Observer”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\MonkGame.cpp(34,15): error C2039: „dungeon”: nie jest składową elementu „Observer”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(9): message : zobacz deklarację „Observer”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\MonkGame.cpp(43,50): error C2039: „player”: nie jest składową elementu „PlayerController”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(11): message : zobacz deklarację „PlayerController”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\MonkGame.cpp(43,98): error C2039: „player”: nie jest składową elementu „PlayerController”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(11): message : zobacz deklarację „PlayerController”
+  MonsterRoom.cpp
+  Observer.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(42,23): error C2061: błąd składniowy: identyfikator „Player”
+  Player.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Dungeon.h(39,70): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(34,19): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\Observer.h(41,22): error C2061: błąd składniowy: identyfikator „Player”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C2143: błąd składniowy: brakuje „;” przed „*”
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,8): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(35,16): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.h(42,23): error C2061: błąd składniowy: identyfikator „Player”
+  PlayerController.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PlayerController.cpp(101,47): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  PublicVariables.cpp
+E:\University\Object Oriented Systems Programming\Assignment\MonkGame\MonkGame\PublicVariables.cpp(31,11): warning C4309: "=": obcięcie stałej wartości
+  Room.cpp
+  TreasureRoom.cpp

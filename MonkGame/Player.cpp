@@ -51,10 +51,7 @@ void Player::playerName()
 	cout << endl << "How are you as a person: ";
 	cin >> desc;
 	cout << endl << "Now your adventure begins! " << this->name << ", I will look forward to hearing about your adventures!" << endl;
-	Sleep(3000);
+	//Sleep(3000);
 	system("pause");
 }
 
-void Player::Update(string message_)
-{
-}

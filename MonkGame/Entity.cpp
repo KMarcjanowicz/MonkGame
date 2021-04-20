@@ -31,6 +31,7 @@ void Entity::Update()
 
 void Entity::Update(string message_)
 {
+	cout << message_ << endl;
 }
 
 void Entity::Update(string message_, int value_)
