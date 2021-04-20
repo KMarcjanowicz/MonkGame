@@ -3,11 +3,15 @@
 #include "Player.h"
 #include "Room.h"
 #include "Observer.h"
+#include "FightSubject.h"
+#include <list>
+
+using namespace std;
 
 class PlayerController
 {
 private:
-	PlayerController(Player* player_);
+	PlayerController();
 
 	static PlayerController* playerController_;
 
@@ -21,7 +25,7 @@ public:
      */
     void operator=(const PlayerController&) = delete;
 
-    static PlayerController* GetInstance(Player* player_);
+    static PlayerController* GetInstance();
     /**
      * Finally, any singleton should define some business logic, which can be
      * executed on its instance.
@@ -35,5 +39,8 @@ public:
 	void move(vector<Room*> connections_, Room* currentRoom_);
 	void pray();
 	void fight();
+    void AttachPlayer(Player* player_);
+
+    void FightInterface(list<Entity*> fighters_, int myIterator_, FightSubject* master_);
 };
 

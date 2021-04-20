@@ -2,24 +2,25 @@
 #include <iostream>
 #include "Observer.h"
 #include "EmptyRoom.h"
+#include "GUI.h"
 
 using namespace std;
 
 PlayerController* PlayerController::playerController_ = nullptr;;
 
-PlayerController::PlayerController(Player* player_)
+PlayerController::PlayerController()
 {
-	this->player = player_;
 }
 
-PlayerController* PlayerController::GetInstance(Player* player_)
+
+PlayerController* PlayerController::GetInstance()
 {
 	/**
 	 * This is a safer way to create an instance. instance = new Singleton is
 	 * dangeruous in case two instance threads wants to access at the same time
 	 */
 	if (playerController_ == nullptr) {
-		playerController_ = new PlayerController(player_);
+		playerController_ = new PlayerController();
 	}
 	return playerController_;
 }
@@ -134,4 +135,32 @@ void PlayerController::fight()
 {
 	Observer* observer = Observer::GetInstance();
 	observer->PlayerFight(player, player->currentRoom);
+}
+
+void PlayerController::AttachPlayer(Player* player_)
+{
+	this->player = player_;
+}
+
+void PlayerController::FightInterface(list<Entity*> fighters_, int myIterator_, FightSubject* master_)
+{
+
+	int action;
+	GUI::ClearConsole();
+	cout << "Choose action: " << endl;
+	cout << "1. Attack" << endl;
+	cout << "2. Defend" << endl;
+	cout << "Perform: ";
+	cin >> action;
+
+	if (action == 1) {
+		//do something
+	}
+	else if (action == 2)
+	{
+		//do something else
+	}
+	else {
+		FightInterface(fighters_, myIterator_, master_);
+	}
 }

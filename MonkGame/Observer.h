@@ -4,6 +4,8 @@
 #include "Dungeon.h"
 #include "Player.h"
 
+using namespace std;
+
 class Observer
 {
 private:
@@ -31,6 +33,7 @@ public:
     //entities
     Player* player;
     Dungeon* dungeon;
+    int currentTurn = NULL;
 public:
     //moving th eplayer
     void PlayerMove(Room* currentRoom_, Room* desiredRoom_);

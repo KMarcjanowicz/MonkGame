@@ -1,5 +1,6 @@
 #pragma once
 #include "IFightSubject.h"
+#include "Entity.h"
 #include <list>
 
 using namespace std;
@@ -12,12 +13,15 @@ public:
 	~FightSubject();
 	void Attach(Entity* entity_);
 	void Detach(Entity* entity_);
+
 	void Notify(); 
 	void NotifyTurn();
 	void Update();
 	void CreateMessage(string message_);
+
 	int HowManyFighters();
-	int DecideTurn();
+	void DecideTurn();
+	void TurnResult();
 
 private:
 	list<Entity*> fighters;

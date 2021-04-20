@@ -42,9 +42,12 @@ void FightSubject::NotifyTurn()
 		if (i = currentTurn) {
 			CreateMessage("turn");
 			if ((*iterator)->type == "player") {
-				Player* player = dynamic_cast<Player*>((*iterator));
+				PlayerController* controller = PlayerController::GetInstance();
+				controller->FightInterface(fighters, i, this);
 			}
-			(*iterator)->Update(this->message);
+			else {
+				(*iterator)->Update(this->message);
+			}
 			break;
 		}
 		++iterator;
@@ -67,18 +70,22 @@ int FightSubject::HowManyFighters()
 	return this->fighters.size();
 }
 
-int FightSubject::DecideTurn()
+void FightSubject::DecideTurn()
 {
-	if (currentTurn == NULL) {
-		currentTurn = 0;
+	if (this->currentTurn == NULL) {
+		this->currentTurn = 0;
 	}
 	else {
-		if (currentTurn < fighters.size()) {
-			currentTurn++;
+		if (this->currentTurn < fighters.size()) {
+			this->currentTurn++;
 		}
 		else {
-			currentTurn = 0;
+			this->currentTurn = 0;
 		}
 	}
-	return currentTurn;
+	NotifyTurn();
+}
+
+void FightSubject::TurnResult()
+{
 }

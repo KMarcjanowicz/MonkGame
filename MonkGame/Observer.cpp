@@ -37,7 +37,7 @@ void Observer::PlayerFight(Player* player_, Room* room_)
 
     while (FightObject->HowManyFighters() > 1)
     {
-
+        FightObject->DecideTurn();
     }
 
 
