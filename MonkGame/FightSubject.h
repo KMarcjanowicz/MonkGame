@@ -1,6 +1,5 @@
 #pragma once
 #include "IFightSubject.h"
-<<<<<<< HEAD
 #include "Entity.h"
 #include <list>
 
@@ -28,10 +27,5 @@ private:
 	list<Entity*> fighters;
 	string message;
 	int currentTurn;
-=======
-class FightSubject :
-    public IFightSubject
-{
->>>>>>> parent of c5fdc97 (Start Combat)
 };
 
