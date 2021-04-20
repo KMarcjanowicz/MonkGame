@@ -25,8 +25,8 @@ int main()
 
     // player spawn
     Player* player = new Player(10, 0.0f, dungeon->getSpawn(), 15, 3);
-    PlayerController* controller = new PlayerController();
-    controller->AttachPlayer(player);
+    PlayerController* controller = PlayerController::GetInstance();
+    controller->player = player;
 
     //observer
     Observer* observer = Observer::GetInstance();
@@ -37,8 +37,10 @@ int main()
         cout << "Debug mode: (y/n)";
         cin >> debug;
     } while (debug != 'n' && debug != 'y');
-
+    GUI::StartScreen();
+    player->playerName();
     if (debug == 'y') {
+        cout << "Player controller is now a singleton" << endl;
         cout << "Starting room: " << controller->player->currentRoom->id_i << " " << controller->player->currentRoom->id_j << endl;
     }
     // main game loop
@@ -46,7 +48,7 @@ int main()
         if (debug == 'n') {
             GUI::ClearConsole();
         }
-
+        GUI::PrintPlayerInfo(player);
         GUI::PrintRoomType(player->currentRoom);
 
         if (debug == 'y') {

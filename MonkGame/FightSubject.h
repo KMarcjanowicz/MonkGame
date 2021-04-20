@@ -3,29 +3,32 @@
 #include "Entity.h"
 #include <list>
 
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
 using namespace std;
 
 class FightSubject :
     public IFightSubject
 {
-public:
-	FightSubject();
-	~FightSubject();
-	void Attach(Entity* entity_);
-	void Detach(Entity* entity_);
+public: 
+    FightSubject();
+    ~FightSubject();
+    void Attach(Entity* observer);
+    void Detach(Entity* observer);
+    void Notify();
 
-	void Notify(); 
-	void NotifyTurn();
-	void Update();
-	void CreateMessage(string message_);
-
-	int HowManyFighters();
-	void DecideTurn();
-	void TurnResult();
+    int HowManyFighters();
+    int DecideTurn();
+    void NotifyTurn(int turn_);
 
 private:
-	list<Entity*> fighters;
-	string message;
-	int currentTurn;
+    list<Entity*> fighters;
+    string message;
+    int currentTurn = 0;
+
 };
 

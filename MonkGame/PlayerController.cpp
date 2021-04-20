@@ -6,26 +6,24 @@
 
 using namespace std;
 
-//PlayerController* PlayerController::playerController_ = nullptr;;
+PlayerController* PlayerController::playerController_ = nullptr;;
 
 PlayerController::PlayerController()
 {
-	player = NULL;
 }
 
-/*
+
 PlayerController* PlayerController::GetInstance()
 {
 	/**
 	 * This is a safer way to create an instance. instance = new Singleton is
 	 * dangeruous in case two instance threads wants to access at the same time
-	 
+	 */
 	if (playerController_ == nullptr) {
 		playerController_ = new PlayerController();
 	}
 	return playerController_;
 }
-*/
 
 void PlayerController::chooseAction()
 {
@@ -49,8 +47,8 @@ void PlayerController::chooseAction()
 			}
 		}
 		else if (currentRoomType == "monster") {
-			cout << "FIGHT!" << endl;
-			cout << "Monster fight will be implemented here" << endl << endl;
+
+			fight();
 
 			cout << "Choose action: " << endl;
 			cout << "1. Move" << endl;
@@ -75,7 +73,7 @@ void PlayerController::chooseAction()
 			if (!emptyRoom->prayed) {
 				cout << "2. Pray" << endl;
 			}
-			
+
 			cin >> action;
 			cout << "Chosen action: " << action << endl;
 			if (action == 1) {
@@ -94,7 +92,7 @@ void PlayerController::chooseAction()
 			}
 		}
 	}
-	
+
 }
 
 void PlayerController::move(vector<Room*> connections_, Room* currentRoom_)
@@ -133,30 +131,8 @@ void PlayerController::pray()
 	observer->playerPray();
 }
 
-void PlayerController::AttachPlayer(Player* player_)
+void PlayerController::fight()
 {
-	this->player = player_;
-}
-
-void PlayerController::FightInterface(list<Entity*> fighters_, int myIterator_, FightSubject* master_)
-{
-
-	int action;
-	GUI::ClearConsole();
-	cout << "Choose action: " << endl;
-	cout << "1. Attack" << endl;
-	cout << "2. Defend" << endl;
-	cout << "Perform: ";
-	cin >> action;
-
-	if (action == 1) {
-		//do something
-	}
-	else if (action == 2)
-	{
-		//do something else
-	}
-	else {
-		FightInterface(fighters_, myIterator_, master_);
-	}
+	Observer* observer = Observer::GetInstance();
+	observer->PlayerFight(player, player->currentRoom);
 }

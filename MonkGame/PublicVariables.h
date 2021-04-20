@@ -31,7 +31,7 @@ private:
 	int DUNG_SIZE= 10;
     vector<vector<string>> DUNG_MAP{
     {"X", "X", "X", "X", "X", "X", "X", "X", "X", "X"},
-    {"X", "P", "M", "O", "E", "X", "X", "X", "X", "X"},
+    {"X", "P", "E", "M", "E", "X", "X", "X", "X", "X"},
     {"X", "X", "X", "X", "O", "X", "M", "X", "X", "X"},
     {"X", "X", "E", "X", "M", "X", "O", "X", "X", "X"},
     {"X", "X", "O", "X", "O", "X", "O", "X", "X", "X"},

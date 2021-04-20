@@ -1,11 +1,8 @@
 #include "FightSubject.h"
-<<<<<<< HEAD
-#include "Player.h"
-#include <string>
+#include "PlayerController.h"
 
 FightSubject::FightSubject()
 {
-	currentTurn = NULL; //always start with a player
 	cout << "==========Fight starts!==========" << endl;
 }
 
@@ -26,73 +23,43 @@ void FightSubject::Detach(Entity* entity_)
 
 void FightSubject::Notify()
 {
-	list<Entity*>::iterator iterator = fighters.begin();
-	HowManyFighters();
-	while (iterator != fighters.end()) {
-		(*iterator)->Update(this->message);
-		++iterator;
-	}
-
-}
-
-void FightSubject::NotifyTurn()
-{
-	/*
-	int i = 0;
-	list<Entity*>::iterator iterator = fighters.begin();
-	HowManyFighters();
-	while (iterator != fighters.end()) {
-		if (i = currentTurn) {
-			CreateMessage("turn");
-			if ((*iterator)->type == "player") {
-				PlayerController* controller = PlayerController::GetInstance();
-				controller->FightInterface(fighters, i, this);
-			}
-			else {
-				(*iterator)->Update(this->message);
-			}
-			break;
-		}
-		++iterator;
-		++i;
-	}
-	*/
-}
-
-void FightSubject::Update()
-{
-}
-
-void FightSubject::CreateMessage(string message_)
-{
-	this->message = message_;
 }
 
 int FightSubject::HowManyFighters()
 {
-	cout << "There are " << this->fighters.size() << " entities engaged in the fight" << endl;;
 	return this->fighters.size();
 }
 
-void FightSubject::DecideTurn()
+int FightSubject::DecideTurn()
 {
-	if (this->currentTurn == NULL) {
-		this->currentTurn = 0;
+
+	if (currentTurn < fighters.size()) {
+		currentTurn = currentTurn + 1;
 	}
 	else {
-		if (this->currentTurn < fighters.size()) {
-			this->currentTurn++;
-		}
-		else {
-			this->currentTurn = 0;
-		}
+		currentTurn = 0;
 	}
-	CreateMessage("Turn has been decided, starts: " + to_string(this->currentTurn));
-	Notify();
+	return (currentTurn - 1);
 }
 
-void FightSubject::TurnResult()
+void FightSubject::NotifyTurn(int turn_)
 {
+	int i = 0;
+	list<Entity*>::iterator iterator = fighters.begin();
+
+	while (iterator != fighters.end()) {
+		if (i = turn_) {
+			cout << (*iterator)->type << endl;
+			if ((*iterator)->type == "player") {
+				PlayerController* controller = PlayerController::GetInstance();
+				cout << "Notify player that it is his turn" << endl;
+			}
+			else {
+				cout << "Notify monster that it is its turn" << endl;
+			}
+			system("pause");
+		}
+		++iterator;
+		++i;
+	}
 }
-=======
->>>>>>> parent of c5fdc97 (Start Combat)

@@ -35,3 +35,20 @@
 
 .vs
 .vs/*
+Debug
+/Debug
+Debug/*
+/Debug/*
+x64
+/x64
+x64/*
+/x64/*
+MonkGame/Debug
+MonkGame/x64
+MonkGame/Debug/*
+MonkGame/x64/*
+
+/MonkGame/Debug
+/MonkGame/x64
+/MonkGame/Debug/*
+/MonkGame/x64/*

@@ -1,6 +1,12 @@
 #include "Player.h"
 #include "EmptyRoom.h"
 
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
 Player::Player(int money_, float score_, Room* spawn_, int hp_, int ap_)
 {
 	this->money = money_;
@@ -18,23 +24,12 @@ Player::~Player()
 {
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-void Player::AddHP()
-=======
-void Player::checkStatus()
-{
-}
-
 void Player::addHP()
->>>>>>> parent of 4c7b700 (eee)
-=======
-void Player::addHP()
->>>>>>> parent of c5fdc97 (Start Combat)
 {
 	cout << "Current HP: " << currentHP << ", max HP: " << HP << endl;
+	cout << "Praying will heal up to 10 HP." << endl;
 	cout << "You can heal max: " << HP - currentHP << endl;
-	cout << "Praying will heal 10 HP." << endl;
+	
 
 	if (currentRoom->type == "empty") {
 		EmptyRoom* emptyRoom = dynamic_cast<EmptyRoom*>(currentRoom);  // Works
@@ -48,7 +43,6 @@ void Player::addHP()
 		}
 	}
 }
-<<<<<<< HEAD
 
 void Player::playerName()
 {
@@ -60,6 +54,3 @@ void Player::playerName()
 	//Sleep(3000);
 	system("pause");
 }
-
-=======
->>>>>>> parent of 4c7b700 (eee)
