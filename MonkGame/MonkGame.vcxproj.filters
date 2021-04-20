@@ -13,30 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Pliki nagłówkowe\Rooms">
-      <UniqueIdentifier>{5a16b986-f3c9-40d5-a5e1-12f3867976b2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki nagłówkowe\Entities">
-      <UniqueIdentifier>{01f8b60e-937d-4957-976a-1346efdf90c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\Rooms">
-      <UniqueIdentifier>{7b31dc64-6d88-4941-9600-9e61edacc717}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\Entities">
-      <UniqueIdentifier>{c9063ffd-ffb2-4e11-81b5-5e8cbe8b0433}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\Controllers &amp; AI">
-      <UniqueIdentifier>{3dc6dfef-4cc5-4669-a47d-465eb6ef2a2c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki nagłówkowe\Controllers &amp; AI">
-      <UniqueIdentifier>{88b44415-790a-40c5-995d-771a58540a39}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki nagłówkowe\Fight">
-      <UniqueIdentifier>{17b7f7ea-e46d-4c37-a641-1d154b88cb2d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\Fight">
-      <UniqueIdentifier>{6223cb0f-5026-448a-992e-1fc64732cecb}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MonkGame.cpp">
@@ -48,50 +24,35 @@
     <ClCompile Include="PublicVariables.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Corridor.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="EmptyRoom.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerController.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
     <ClCompile Include="GUI.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Observer.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Corridor.cpp">
-      <Filter>Pliki źródłowe\Rooms</Filter>
-    </ClCompile>
-    <ClCompile Include="EmptyRoom.cpp">
-      <Filter>Pliki źródłowe\Rooms</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Pliki źródłowe\Entities</Filter>
+    <ClCompile Include="TreasureRoom.cpp">
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="MonsterRoom.cpp">
-      <Filter>Pliki źródłowe\Rooms</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Pliki źródłowe\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="Room.cpp">
-      <Filter>Pliki źródłowe\Rooms</Filter>
-    </ClCompile>
-    <ClCompile Include="TreasureRoom.cpp">
-      <Filter>Pliki źródłowe\Rooms</Filter>
-    </ClCompile>
-    <ClCompile Include="Goblin.cpp">
-      <Filter>Pliki źródłowe\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerController.cpp">
-      <Filter>Pliki źródłowe\Controllers &amp; AI</Filter>
-    </ClCompile>
-    <ClCompile Include="AI.cpp">
-      <Filter>Pliki źródłowe\Controllers &amp; AI</Filter>
-    </ClCompile>
-    <ClCompile Include="IFightObserver.cpp">
-      <Filter>Pliki źródłowe\Fight</Filter>
-    </ClCompile>
-    <ClCompile Include="IFightSubject.cpp">
-      <Filter>Pliki źródłowe\Fight</Filter>
-    </ClCompile>
-    <ClCompile Include="FightSubject.cpp">
-      <Filter>Pliki źródłowe\Fight</Filter>
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,50 +62,35 @@
     <ClInclude Include="PublicVariables.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Corridor.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyRoom.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerController.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
     <ClInclude Include="GUI.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Observer.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="Corridor.h">
-      <Filter>Pliki nagłówkowe\Rooms</Filter>
-    </ClInclude>
-    <ClInclude Include="EmptyRoom.h">
-      <Filter>Pliki nagłówkowe\Rooms</Filter>
+    <ClInclude Include="TreasureRoom.h">
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="MonsterRoom.h">
-      <Filter>Pliki nagłówkowe\Rooms</Filter>
-    </ClInclude>
-    <ClInclude Include="Room.h">
-      <Filter>Pliki nagłówkowe\Rooms</Filter>
-    </ClInclude>
-    <ClInclude Include="TreasureRoom.h">
-      <Filter>Pliki nagłówkowe\Rooms</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Pliki nagłówkowe\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Pliki nagłówkowe\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Goblin.h">
-      <Filter>Pliki nagłówkowe\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerController.h">
-      <Filter>Pliki nagłówkowe\Controllers &amp; AI</Filter>
-    </ClInclude>
-    <ClInclude Include="AI.h">
-      <Filter>Pliki nagłówkowe\Controllers &amp; AI</Filter>
-    </ClInclude>
-    <ClInclude Include="IFightObserver.h">
-      <Filter>Pliki nagłówkowe\Fight</Filter>
-    </ClInclude>
-    <ClInclude Include="IFightSubject.h">
-      <Filter>Pliki nagłówkowe\Fight</Filter>
-    </ClInclude>
-    <ClInclude Include="FightSubject.h">
-      <Filter>Pliki nagłówkowe\Fight</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

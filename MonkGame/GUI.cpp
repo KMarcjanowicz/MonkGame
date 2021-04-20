@@ -58,26 +58,3 @@ void GUI::PrintRoomType(Room* room_)
 {
     cout << "Player is in room: " << room_->type << endl;
 }
-
-void GUI::PrintPlayerInfo(Player* player_)
-{
-    cout << player_->name << "'s HP: " << player_->currentHP << ", Score: " << player_->score << endl;
-}
-
-void GUI::StartScreen()
-{
-    // Create and open a text file
-    ifstream  MyFile("Screens/StartScreen.txt");
-
-    // Create a text string, which is used to output the text file
-    string myText;
-
-    // Use a while loop together with the getline() function to read the file line by line
-    while (getline(MyFile, myText)) {
-        // Output the text from the file
-        cout << myText << endl;
-    }
-
-    // Close the file
-    MyFile.close();
-}

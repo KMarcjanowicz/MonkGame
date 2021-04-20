@@ -25,6 +25,7 @@ void Entity::Defend()
 {
 }
 
+<<<<<<< HEAD
 void Entity::Update()
 {
 }
@@ -39,6 +40,9 @@ void Entity::Update(string message_, int value_)
 }
 
 Entity::~Entity()
+=======
+void Entity::update()
+>>>>>>> parent of 4c7b700 (eee)
 {
 }
 

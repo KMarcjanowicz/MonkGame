@@ -15,9 +15,15 @@ public:
 	int money;
 	float score;
 public:
+<<<<<<< HEAD
 	void AddHP();
 	void playerName();
 
 	~Player();
+=======
+	void checkStatus();
+
+	void addHP();
+>>>>>>> parent of 4c7b700 (eee)
 };
 
